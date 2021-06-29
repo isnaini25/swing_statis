@@ -94,43 +94,151 @@
         <div class="container-fluid penjahit-corner">
             <h1>Temukan penjahit yang cocok untuk Anda</h1>
             <div class="row">
-                <?php
-                include "lib/config.php";
-                include "lib/koneksi.php";
-                $kueri = mysqli_query($koneksi, "SELECT * FROM tbl_penjahit LIMIT 8");
-                while ($res = mysqli_fetch_array($kueri)) { ?>
+                
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="penjahit-item">
                             <div class="penjahit-gambar">
-                                <img src="admin/upload/<?php echo $res['foto']; ?>" alt="">
+                                <img src="assets/img/1.png" alt="">
                             </div>
                             <div class="penjahit-desc">
-                                <span class="penjahit-name"><?php echo $res['nama']; ?></span>
-                                <?php
-                                $idPenjahit = $res['idPenjahit'];
-                                $kueriItem = mysqli_query($koneksi, "SELECT * FROM tbl_itemKategori a INNER JOIN tbl_kategori b ON a.idKategori = b.idKategori WHERE idPenjahit = '$idPenjahit' LIMIT 2");
-                                $no = 0;
-                                while ($resItem = mysqli_fetch_array($kueriItem)) {
-
-                                ?>
-
+                                <span class="penjahit-name">Penjahit Nama</span>
                                     <span class="penjahit-category">
-                                        <?php if ($no > 0) {
-                                            echo ", ";
-                                        }
-                                        echo $resItem['namaKategori']; ?>
-                                    <?php $no++;
-                                } ?>
+                                    Seragam, Gaun, Umum
                                     </span>
-
                             </div>
                             <div class="next">
-                                <a href="profilPenjahit.php?id=<?php echo $res['idPenjahit']; ?>">LIHAT </a>
+                                <a href="profilPenjahit.php">LIHAT </a>
                             </div>
 
                         </div>
                     </div>
-                <?php } ?>
+
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="penjahit-item">
+                            <div class="penjahit-gambar">
+                                <img src="assets/img/2.jpg" alt="">
+                            </div>
+                            <div class="penjahit-desc">
+                                <span class="penjahit-name">Penjahit Nama</span>
+                                    <span class="penjahit-category">
+                                    Seragam, Gaun, Umum
+                                    </span>
+                            </div>
+                            <div class="next">
+                                <a href="">LIHAT </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="penjahit-item">
+                            <div class="penjahit-gambar">
+                                <img src="assets/img/3.jpg" alt="">
+                            </div>
+                            <div class="penjahit-desc">
+                                <span class="penjahit-name">Penjahit Nama</span>
+                                    <span class="penjahit-category">
+                                    Seragam, Gaun, Umum
+                                    </span>
+                            </div>
+                            <div class="next">
+                                <a href="">LIHAT </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="penjahit-item">
+                            <div class="penjahit-gambar">
+                                <img src="assets/img/4.jpg" alt="">
+                            </div>
+                            <div class="penjahit-desc">
+                                <span class="penjahit-name">Penjahit Nama</span>
+                                    <span class="penjahit-category">
+                                    Seragam, Gaun, Umum
+                                    </span>
+                            </div>
+                            <div class="next">
+                                <a href="">LIHAT </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="penjahit-item">
+                            <div class="penjahit-gambar">
+                                <img src="assets/img/5.jpg" alt="">
+                            </div>
+                            <div class="penjahit-desc">
+                                <span class="penjahit-name">Penjahit Nama</span>
+                                    <span class="penjahit-category">
+                                    Seragam, Gaun, Umum
+                                    </span>
+                            </div>
+                            <div class="next">
+                                <a href="">LIHAT </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="penjahit-item">
+                            <div class="penjahit-gambar">
+                                <img src="assets/img/6.jpg" alt="">
+                            </div>
+                            <div class="penjahit-desc">
+                                <span class="penjahit-name">Penjahit Nama</span>
+                                    <span class="penjahit-category">
+                                    Seragam, Gaun, Umum
+                                    </span>
+                            </div>
+                            <div class="next">
+                                <a href="">LIHAT </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="penjahit-item">
+                            <div class="penjahit-gambar">
+                                <img src="assets/img/7.jpg" alt="">
+                            </div>
+                            <div class="penjahit-desc">
+                                <span class="penjahit-name">Penjahit Nama</span>
+                                    <span class="penjahit-category">
+                                    Seragam, Gaun, Umum
+                                    </span>
+                            </div>
+                            <div class="next">
+                                <a href="">LIHAT </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="penjahit-item">
+                            <div class="penjahit-gambar">
+                                <img src="assets/img/8.jpg" alt="">
+                            </div>
+                            <div class="penjahit-desc">
+                                <span class="penjahit-name">Penjahit Nama</span>
+                                    <span class="penjahit-category">
+                                    Seragam, Gaun, Umum
+                                    </span>
+                            </div>
+                            <div class="next">
+                                <a href="">LIHAT </a>
+                            </div>
+
+                        </div>
+                    </div>
+             
 
 
             </div>
